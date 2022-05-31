@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"name": "notes",
+			"path": "../../.."
+		},
+		{
+			"name": "apps",
+			"path": "../../../../apps"
+		},
+		{
+			"name": "practicas",
+			"path": "../../../../practicas"
+		},
+		{
+			"name": "shared",
+			"path": "../../../.."
+		},
+		{
+			"name": "remote",
+			"path": "../../../../remote"
+		}
+	]
+}
