@@ -1,0 +1,16 @@
+IAM primitives roles
+Owner :
+   invitar mienbros
+   remover mimbros
+   borrar proyectos
+Editor:
+   despliegue de aplicaciones
+   modificar código
+   configurar servicios
+Viwer :
+   solo lectura
+Billing admin:
+   administrar billing
+   add and remove admins
+
+IAM custom roles solo a nivel projecto u organization

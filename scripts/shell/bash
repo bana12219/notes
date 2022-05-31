@@ -1,0 +1,62 @@
+
+
+if [ test_command ]
+then
+     commands
+elif [ test_command ]
+then
+     commands
+else     (Optional)
+     commands
+fi
+
+for loop_variable in argument_list
+do
+    commands
+done
+
+while test_condition_is_true
+do
+    commands
+done
+
+
+
+until test_condition_is_true
+do
+    commands
+done
+
+
+
+case $variable in
+match_1)
+        commands_to_execute_for_1
+        ;;
+match_2)
+        commands_to_execute_for_2
+       ;;
+match_3)
+        commands_to_execute_for_3
+       ;;
+ *)    (Optional - any other value)
+       commands_to_execute_for_no_match
+     ;;
+esac
+
+########function 
+
+function_name ()
+{
+     commands to execute
+}
+
+function function_name
+{
+     commands to execute
+}
+## para ejecutar script
+##sh shell_script_name
+
+
+

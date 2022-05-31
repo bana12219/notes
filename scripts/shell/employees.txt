@@ -1,0 +1,4 @@
+1001 John Sena 40000 run
+1002 Jafar Iqbal 60000 dance
+1003 Meher Nigar 30000 swim
+1004 Jonny Liver 70000 sing

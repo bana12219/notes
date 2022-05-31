@@ -1,0 +1,776 @@
+    1  sudo apt install openjdk-11-jdk
+    8  sudo update-alternatives --display maven
+   11  cd /opt
+   14  source /etc/profile.d/maven.sh
+   18  sudo gedit /etc/profile.d/maven.sh
+   23  sudo gedit /etc/profile.d/maven.sh
+   33  sudo apt-get install 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   34  git -version
+   35  git --version
+   47  git config --global user.email "ing.annab3z@gmail.com"
+   48  git config --global user.email "anab3z"
+   52  git add .
+   53  git commit -m "agregando configuracion item"
+   57  netstat -a
+   64  cd /usr/bin/java
+   70  sudo gedit environment
+   83  git add .
+   84  git commit -m "modificando el perfil probando @refresh"
+   85  git remote add origin https://github.com/anab3z/uds-servicio-items-config.git
+   86  git push -u origin master
+   87  git add .
+   88  git push -u origin master
+   89  git checkout master
+   90  git pull origin master
+   91  git pull
+   92  git clone https://github.com/anab3z/uds-servicio-items-config.git
+   93  git merge https://github.com/anab3z/uds-servicio-items-config.git
+   94  whereis java
+   95  which java
+  109  mvn install -DskipTest
+  124  sh ./Postman
+  128  ./Postman
+  132  man lsb_release
+  133  lsb_release -a
+  136  sudo apt install mysql-server
+  137  mysql --version
+  138  sudo mysql_secure_installation
+  139  sudo mysql
+  140  sudo dpkg -i mysql-apt-config_0.5.3-1_all.deb
+  157  mysql -u anaDMIN -p
+  158  mysql -u root
+       git init
+  172  git add .
+  173  git commit -m "configuracion producto properties"
+  174  git push -u origin master
+  178  git pull origin master
+  179  git checkout master
+  191  git add .
+  192  git reset
+  202  mvn clean install
+  206  echo $PATH
+  207  jshell
+  210  java -jar zipkin.jar
+  215  wget -O -"https://packagecloud.io/rabbitmq/rabbitmq-server/gpgkey" | sudo apt-key add-
+  218  sudo apt-get update
+  219  wget -O -"https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc" | sudo apt-key add-
+  221  gedit /etc/apt/sources.list.d/bintray.rabbitmq.list
+  224  gedit mysql.list
+  225  lsb_release -a
+  226  sudo gedit /etc/apt/sources.list.d/bintray.rabbitmq.list
+  227  sudo apt-get update
+  228  sudo gedit /etc/apt/sources.list.d/bintray.rabbitmq.list
+  229  sudo apt-get update
+  230  sudo apt-key adv --keyserver "hkps.pool.sks-keyservers.net" --recv-keys "0x6B73A36E6026DFCA"
+  231  wget -O -"https://www.rabbitmq.com/rabbitmq-release-signing-key.asc" | sudo apt-key add-
+  232  apt-key update
+  233  sudo apt-key update
+  234  sudo apt-key exportall
+  235  curl -fsSL https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc | sudo apt-key add -
+  236  sudo apt install curl
+  237  apt --fix-broken install
+  238  sudo apt --fix-broken install
+  239  curl -fsSL https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc | sudo apt-key add -
+  240  sudo apt install curl
+  241  curl -fsSL https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc | sudo apt-key add -
+  242  sudo apt-key adv --keyserver "hkps.pool.sks-keyservers.net" --recv-keys "0x6B73A36E6026DFCA"
+  243  sudo apt-get install apt-transport-http
+  244  clear
+  245  sudo /etc/apt/sources.list.d/bintray.erlang.list
+  246  sudo gedit /etc/apt/sources.list.d/bintray.erlang.list
+  247  clear
+  248  sudo gedit /etc/apt/sources.list.d/bintray.erlang.list
+  249  clear
+  250  sudo gedit /etc/apt/sources.list.d/bintray.rabbitmq.list
+  251  sudo apt-get update
+  252  clear
+  253  sudo apt-get install rabbitmq-server
+  254  clear
+  255  sudo apt-get install rabbitmq-server
+  256  sudo systemctl status rabbitmq-server.service
+  273  service docker start
+  274  sudo systemctl status docker
+  275  sudo docker ps
+  276  sudo docker container rm 0f144228cf19
+  277  sudo docker container stop 0f144228cf19
+    5  sudo apt install openjdk-11-jdk
+    6  java -version
+    7  exit
+    8  sudo update-alternatives --display maven
+    9  display maven
+   14  source /etc/profile.d/maven.sh
+   15  mvn -version
+   18  sudo gedit /etc/profile.d/maven.sh
+  249  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add-
+  250  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key update-
+  251  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key update-
+  252  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key list-
+  253  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key list-
+  254  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  255  sudo apt-key fingerprint 0EBFCD88
+  256  pub   rsa4096 2017-02-22 [SCEA]
+  257  uid           [ unknown] Docker Release (CE deb) <docker@docker.com>
+  258  sudo apt-key fingerprint 0EBFCD88   
+  259  pub   rsa4096 2017-02-22 [SCEA]     9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88 uid           [ unknown] Docker Release (CE deb) <docker@docker.com> sub   rsa4096 2017-02-22 [S]
+  261  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu disco stable"
+  262  sudo apt update
+  263  apt-cache policy docker-ce
+  264  sudo apt install docker-ce
+  265* sudo systemctl status docker
+  266  sudo systemctl status rabbitmq
+  267  service rabbitmq-server stop
+  268  service zipkin-server stop
+  269* 
+  270  service docker stop
+  271  docker --version
+  272  rabbitmq --version
+  273  zipkin --version
+  277  sudo docker build -t uds-config-server:v1 .
+  281  docker images
+  282  sudo docker images
+  283  docker network create uds-network
+  285  sudo docker network create uds-network
+  288  sudo docker run -p 8888:8888 --name uds-config-server --network uds-network uds-config-server:v1
+  289  sudo docker container ls
+  294  sudo docker container stop 46ee5b2376e40c9580d1b97cc70ea7a410c4b7ba636f59b1b2f86caba531955e 
+  298  sudo docker container rm 46ee5b2376e40c9580d1b97cc70ea7a410c4b7ba636f59b1b2f86caba531955e 
+  305  sudo docker build -t uds-eureka-server:v1 .
+  313  sudo docker run -p8761:8761 --name uds-eureka-server --network uds-network uds-eureka-server:v1
+  318  sudo docker container stop b3c1273690bb
+  319  sudo docker container ps -a
+  326  sudo docker pull mysql:latest
+  327  sudo docker images
+  329  sudo docker run -p 3306:3306 --name uds-mysql-latest --network uds-network -e MYSQL_ROOT_PASSWORD=31y0_*PU3d0.31 -e MYSQL_DATABASE=uds_productos_db mysql:latest
+  330  sudo docker container rm 0f144228cf19
+  331  sudo docker container ps -a
+  230  sudo rabbitmqctl set_user_tags anaDMIN administrator
+  231  sudo rabbitmqctl add_user anaDMIN 33y0_*PU3d0.33
+  232  sudo rabbitmqctl set_user_tags anaDMIN administrator
+  234  sudo systemctl restart rabbitmq-server.service
+  235  sudo netstat -tunlp
+  257  gedit enabled_plugins
+  258  sudo service rabbitmq-server stop
+  260  sudo service rabbitmq-server start
+  261  sudo service rabbitmq-server stop
+
+
+  132  man lsb_release
+  133  lsb_release -a
+  134  sudo apt update
+  135  apt list --upgradable
+  136  sudo apt install mysql-server
+  137  mysql --version
+  138  sudo mysql_secure_installation
+  139  sudo mysql
+  140  sudo dpkg -i mysql-apt-config_0.5.3-1_all.deb
+  141  sudo apt install mysql-workbench-community
+  191  git add .
+  192  git reset
+  194  git add .
+  195  git commit -m "agregand oauth properties"
+  196  git push -u origin master
+  202  mvn clean install
+  215  wget -O -"https://packagecloud.io/rabbitmq/rabbitmq-server/gpgkey" | sudo apt-key add-
+  219  wget -O -"https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc" | sudo apt-key add-
+  221  gedit /etc/apt/sources.list.d/bintray.rabbitmq.list
+  224  gedit mysql.list
+  225  lsb_release -a
+  226  sudo gedit /etc/apt/sources.list.d/bintray.rabbitmq.list
+  227  sudo apt-get update
+  228  sudo gedit /etc/apt/sources.list.d/bintray.rabbitmq.list
+  229  sudo apt-get update
+  230  sudo apt-key adv --keyserver "hkps.pool.sks-keyservers.net" --recv-keys "0x6B73A36E6026DFCA"
+  231  wget -O -"https://www.rabbitmq.com/rabbitmq-release-signing-key.asc" | sudo apt-key add-
+  232  apt-key update
+  233  sudo apt-key update
+  234  sudo apt-key exportall
+  235  curl -fsSL https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc | sudo apt-key add -
+  236  sudo apt install curl
+  237  apt --fix-broken install
+  238  sudo apt --fix-broken install
+  239  curl -fsSL https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc | sudo apt-key add -
+  240  sudo apt install curl
+  241  curl -fsSL https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc | sudo apt-key add -
+  242  sudo apt-key adv --keyserver "hkps.pool.sks-keyservers.net" --recv-keys "0x6B73A36E6026DFCA"
+  243  sudo apt-get install apt-transport-http
+  244  clear
+  245  sudo /etc/apt/sources.list.d/bintray.erlang.list
+  246  sudo gedit /etc/apt/sources.list.d/bintray.erlang.list
+  247  clear
+  248  sudo gedit /etc/apt/sources.list.d/bintray.erlang.list
+  249  clear
+  250  sudo gedit /etc/apt/sources.list.d/bintray.rabbitmq.list
+  251  sudo apt-get update
+  252  clear
+  253  sudo apt-get install rabbitmq-server
+  254  clear
+  255  sudo apt-get install rabbitmq-server
+  256  sudo systemctl status rabbitmq-server.service
+  288  mvn clean package -DskipTest
+  289  mvn clean package -DskipTests
+  290  sudo docker build -t uds-zuul-server:v1 .
+  291  sudo docker images
+  292  sudo docker run -p 8090:8090 --name uds-zuul-server --network uds-network uds-zuul-server:v1 
+  293  lsb_release
+  294  lbs_release
+  295  lsb_release
+  296  lsb_release -a
+  297  ls
+  298  gedit bintray.rabbitmq.list
+  299  sudo gedit bintray.rabbitmq.list
+  300  sudo apt-get update -y
+  301  sudo apt-get install -y erlang-base                         erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets                         erlang-mnesia erlang-os-mon erlang-parsetools erlang-public-key                         erlang-runtime-tools erlang-snmp erlang-ssl                         erlang-syntax-tools erlang-tftp erlang-tools erlang-xmerl
+  309  sudo rabbitmq-plugins enable rabbitmq_management
+  310  clear
+  311  sudo rabbitmqctl add_user admin 33y0_*PU3d0.33
+  312  sudo rabbitmqctl set_user_tags anaDMIN administrator
+  313  sudo rabbitmqctl add_user anaDMIN 33y0_*PU3d0.33
+  314  sudo rabbitmqctl set_user_tags anaDMIN administrator
+  316  sudo systemctl restart rabbitmq-server.service
+  317  sudo netstat -tunlp
+  326  kil -15 3968
+  329  netstat -lt
+  330  ps x | grep 21790
+  331  ps aux | grep 21790
+  332  ps ax | grep 21790
+  333  ps aux | grep 21790
+  339  gedit enabled_plugins
+  340  sudo service rabbitmq-server stop
+  342  sudo service rabbitmq-server start
+  343  sudo service rabbitmq-server stop
+  346  gedit 'udo service rabbitmq-server stop'
+  347  mv 'udo service rabbitmq-server stop' old
+  348  sudo mv 'udo service rabbitmq-server stop' old
+  349  ls
+  350  sudo mv 'udo service rabbitmq-server stop' /home/anab3z/Escritorio/old
+  351  sudo mv old /home/anab3z/Escritorio/old
+  355  sudo docker build -t uds-servicio-productos:v1 .
+  373  git add .
+  374  git commit -m "configuracion producto properties"
+  376  sudo docker container ps
+  377  sudo docker images
+  378  sudo docker container stop uds-config-server 
+  379  sudo docker container rm uds-config-server 
+  380  sudo docker container stop uds-eureka-server 
+  381  sudo docker container rm uds-eureka-server 
+  388  sudo docker build -t uds-config-server:v2 .
+  389  sudo docker images
+  390  sudo docker -p 8888:8888 --name uds-config-server --network uds-network uds-config-server:v2
+  391  sudo docker run -p 8888:8888 --name uds-config-server --network uds-network uds-config-server:v2
+  392  sudo docker start uds-config-server
+  393  sudo docker container stop uds-config-server 
+  394  sudo docker container rm uds-config-server 
+  395  sudo docker run -p 8888:8888 --name uds-config-server --network uds-network uds-config-server:v2
+  408  invoke-rc.d rabbitmq-server start
+  409  service rabbitmq-server start
+  410  sudo service rabbitmq-server start
+  414  pidof zipkin
+  415  clear
+  416  ps aux | grep zipkin
+  418  pidof | 7826
+  419  pidof | grep 7826
+  420  ps | grep 7826
+  421  ps x| grep 7826
+  422  kill 7826
+  423  ps aux | grep zipkin
+  425  kill 7827
+  426  sudo apt-get update
+  427  sudo apt-get install     apt-transport-https     ca-certificates     curl     software-properties-common
+  429  sudo apt install apt-transport-https ca-certificates curl software-properties-common
+  430  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add-
+  431  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key update-
+  432  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key update-
+  433  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key list-
+  434  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key list-
+  435  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  436  sudo apt-key fingerprint 0EBFCD88
+  437  pub   rsa4096 2017-02-22 [SCEA]
+  438  uid           [ unknown] Docker Release (CE deb) <docker@docker.com>
+  439  sudo apt-key fingerprint 0EBFCD88   
+  440  pub   rsa4096 2017-02-22 [SCEA]     9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88 uid           [ unknown] Docker Release (CE deb) <docker@docker.com> sub   rsa4096 2017-02-22 [S]
+  441  clear
+  442  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu disco stable"
+  443  sudo apt update
+  444  apt-cache policy docker-ce
+  445  sudo apt install docker-ce
+  446  sudo systemctl status docker
+  447  sudo systemctl status rabbitmq
+  448  service rabbitmq-server stop
+  449  service zipkin-server stop
+  450  service docker stop
+  451  docker --version
+  452  rabbitmq --version
+  453  zipkin --version
+  454  cd /home/anab3z/workspaces/sts/docker/uds-servicio-config-server
+  455  ls
+  456  docker build -t uds-config-server:v1 .
+  457  sudo docker build -t uds-config-server:v1 .
+  458  cd /home/anab3z/workspaces/sts/uds-servicio-config-server/
+  465  sudo docker network create uds-network
+  466  docker run -p 8888:8888 --name uds-config-server --network
+  467  sudo docker run -p 8888:8888 --name uds-config-server --network
+  468  sudo docker run -p 8888:8888 --name uds-config-server --network uds-network uds-config-server:v1
+  470  sudo docker run -p 8888:8888 --name uds-config-server --network uds-network uds-config-server:v1
+  479  sudo docker container ps -a
+  493  sudo docker run -p 8761:8761 --name uds-eureka-server --network uds-network uds-eureka-server:v1
+  498  sudo docker container stop b3c1273690bb
+  499  sudo docker container ps -a
+  500  sudo docker container rm b3c1273690bb
+  501  sudo docker container ps -a
+  502  sudo docker images ps -a
+  503  sudo docker images ls -a
+  504  sudo docker image ls -a
+  505  sudo docker container rm de627c192416
+  506  sudo docker pull mysql:latest
+  507  sudo docker images
+  508  sudo socker run -p 3306:3306 --name uds-mysql-latest --network uds-network -e MYSQL_ROOT_PASSWORD=31y0_*PU3d0.31 -e MYSQL_DATABASE=uds_productos_db mysql:latest
+  509  sudo docker run -p 3306:3306 --name uds-mysql-latest --network uds-network -e MYSQL_ROOT_PASSWORD=31y0_*PU3d0.31 -e MYSQL_DATABASE=uds_productos_db mysql:latest
+  510  sudo docker container rm 0f144228cf19
+  511  sudo docker container ps -a
+  512  sudo docker images
+  513  history
+  514  sudo docker images
+  515  sudo docker run -p8761:8761 --name uds-eureka-server --network uds-network uds-eureka-server:v1
+  516  sudo docker images
+  517  sudo docker containers
+  518  sudo docker containers ps
+  519  sudo docker container ps
+  520  sudo docker run -p8761:8761 --name uds-eureka-server --network uds-network uds-eureka-server:v1
+  521  sudo docker run -p 8888:8888 --name uds-config-server --network uds-network uds-config-server:v1
+  522  sudo docker container ls
+  523  sudo docker images
+  524  sudo docker run -p 8888:8888 --name uds-eureka-server --network uds-network uds-eureka-server:v1
+  525  sudo docker run -p 8761:8761 --name uds-eureka-server --network uds-network uds-eureka-server:v1
+  526  sudo docker container stop uds-eureka-server
+  527  sudo docker container rm uds-eureka-server
+  528  sudo docker run -p 8761:8761 --name uds-eureka-server --network uds-network uds-eureka-server:v1
+  539  cd init.d
+  547  sudo docker images
+  548  docker start mysql 
+  549  sudo docker start mysql 
+  550  sudo docker container start ed1ffcb5eff3
+  551  sudo docker container start uds-eureka-server
+  552  sudo docker run -p 3306:3306 --name uds-mysql-latest --network uds-network -e MYSQL_ROOT_PASSWORD=31y0_*PU3d0.31 -e MYSQL_DATABASE=uds_productos_db mysql:latest
+  553  sudo docker run -p 3306:3306 --name uds-mysql-latest --network uds-network -e MYSQL_ROOT_PASSWORD=31y0_*PU3d0.31 -e MYSQL_DATABASE=uds_productos_db mysql:latest -e MYSQL_USER=anaDMIN -e MYSQL_PASSWORD=34y0_*PU3d0.34
+  554  sudo docker run -p 3306:3306 --name uds-mysql-latest --network uds-network -e MYSQL_ROOT_PASSWORD=31y0_*PU3d0.31 -e MYSQL_DATABASE=uds_productos_db -e MYSQL_USER=anaDMIN -e MYSQL_PASSWORD=34y0_*PU3d0.34 uds-mysql-latest:latest
+  555  sudo docker container images
+  556  sudo docker images
+  557  sudo docker run -p 3306:3306 --name uds-mysql-latest --network uds-network -e MYSQL_ROOT_PASSWORD=31y0_*PU3d0.31 -e MYSQL_DATABASE=uds_productos_db -e MYSQL_USER=anaDMIN -e MYSQL_PASSWORD=34y0_*PU3d0.34 mysql:latest
+  558  sservice docker stop
+  559  service docker start
+  560  sudo systemctl status docker
+  561  sudo docker ps
+  562  sudo docker container rm 0f144228cf19
+  563  sudo docker container stop 0f144228cf19
+  578  history
+  579  sudo docker run -p--name uds-servicio-productos --network uds-network uds-servicio-productos:v1
+  580  sudo docker run -p --name uds-servicio-productos --network uds-network uds-servicio-productos:v1
+  581  sudo docker run -p --network uds-network uds-servicio-productos:v1
+  582  sudo docker run -P --name uds-servicio-productos --network uds-network uds-servicio-productos:v1
+  583  sudo docker container stop uds-servicio-productos
+  584  sudo docker container rm uds-servicio-productos
+  585  sudo docker run -P --name uds-servicio-productos --network uds-network uds-servicio-productos:v1
+  586  sudo docker container stop uds-servicio-productos
+  587  sudo docker container rm uds-servicio-productos
+  588  sudo docker run -P --name uds-servicio-productos --network uds-network uds-servicio-productos:v1
+  589  sudo docker exec -i uds-mysql-latest
+  590  mysql -u anaDMIN -p 34y0_*PU3d0.34
+  591  sudo docker exec -i uds-mysql-latest
+  592  mysql -u root -p 31y0_*PU3d0.31
+  593  sudo docker exec -t
+  594  sudo docker exec -t uds-mysql-latest
+  595  sudo docker exec -t uds-mysql-latest mysql -u root -p 31y0_*PU3d0.31; use uds_productos_db;
+  596  sudo docker container exec -it mysql /bin/bash
+  597  sudo docker container exec -it uds-mysql-latest /bin/bash
+  598  cd /home/anab3z/workspaces/sts/uds-servicio-usuario/
+  599  mvn clean package -DskipTest
+  600  mvn clean package -DskipTests
+  601  sudo docker build -t uds-servicio-usuario:v1 .
+  602  sudo docker -P --name uds-servicio-usuario --network uds-network uds-servicio-usuario:v1
+  603  sudo docker run -P --name uds-servicio-usuario --network uds-network uds-servicio-usuario:v1
+  604  cd /home/anab3z/workspaces/sts/uds-servicio-usuarios-oauth/
+  605  mvn clean install -DskipTests
+  606  sudo docker build -t uds-servicio-oauth:v1 .
+  607  sudo docker images
+  608  docker run -p 9101:9101 --name uds-servicio-oauth --network uds-network uds-servicio-oauth:v1
+  609  sudo docker run -p 9101:9101 --name uds-servicio-oauth --network uds-network uds-servicio-oauth:v1
+  610  cd /home/anab3z/workspaces/sts/uds-servicio-item-resttemp/
+  611  mvn clean package -DskipTest
+  612  mvn clean package -DskipTests
+  613  sudo docker build -t uds-servicio-item:v1 .
+  614  sudo docker images
+  615  sudo docker ps
+  616  sudo docker run -P --name uds-servicio-item --network uds-network uds-servicio-item:v1
+  617  sudo docker ps
+  618  sudo docker stop cfa22fbe74ba ed85b56ce360 3b977a0f6aa6 4b4bc1257641 60461c6e1472 1c9af26b695a e2bcda691544 f4314b5c8452
+  619  sudo docker ps
+  620  sudo docker ps -a
+  621  sudo docker docker pull rabbitmq:3.8.2-management-alpine
+  622  sudo docker pull rabbitmq:3.8.2-management-alpine
+  623  docker image
+  624  docker images
+  625  sudo docker images
+  626  docker ps -q
+  627  sudo docker ps -q
+  628  sudo docker ps -a
+  629  sudo docker stop $(docker ps -q)
+  630  sudo docker stop $(sudo docker ps -q)
+  631  sudo docker rm $(sudo docker ps -a -q)
+  632  sudo docker-compose --version
+  633  sudo docker run -p 15672:15672 -p 5672:5672 --name uds-rabbit-server --network uds-network -d rabbitmq:3.8.2-management-alpine 
+  634  docker log -f
+  635  sudo docker logs -f uds-rabbit-server
+  636  sudo docker ps
+  637  sudo docker run -p 3306:3306 --name uds-mysql-latest --network uds-network -e MYSQL_ROOT_PASSWORD=31y0_*PU3d0.31 -e MYSQL_DATABASE=uds_productos_db -e MYSQL_USER=anaDMIN -e MYSQL_PASSWORD=34y0_*PU3d0.34 mysql:latest
+  638  sudo docker ps -a
+  639  sudo docker stop 1c9af26b695a
+  640  sudo docker start 1c9af26b695a
+  641  clear
+  642  sudo docker logs -f 1c9af26b695a
+  643  sudo docker start 1c9af26b695a
+  644  sudo docker logs -f 1c9af26b695a
+  645  sudo docker ps
+  646  sudo docker stop 3478dae73dce
+  647  sudo docker rm 3478dae73dce
+  648  sudo docker ps -a
+  649  sudo docker run -p 3306:3306 --name uds-mysql-latest --network uds-network --character-set-server=utf8 --collation-server=utf8_general_ci -e MYSQL_ROOT_PASSWORD=31y0_*PU3d0.31 -e MYSQL_DATABASE=uds_productos_db -e MYSQL_USER=anaDMIN -e MYSQL_PASSWORD=34y0_*PU3d0.34 mysql:8
+  650  sudo docker run -p 3306:3306 --name uds-mysql-latest --network uds-network -e MYSQL_ROOT_PASSWORD=31y0_*PU3d0.31 -e MYSQL_DATABASE=uds_productos_db -e MYSQL_USER=anaDMIN -e MYSQL_PASSWORD=34y0_*PU3d0.34 mysql:latest --character-set-server=utf8 --collation-server=utf8_general_ci
+  651  clear
+  652  service mysql start
+  653  mysql -u anaDMIN -p
+  654  mysql -u uds_zipkin_user -p
+  655  mysql -u anaDMIN -p
+  656  mysql -u uds_zipkin_user -p
+  657  service mysql stop
+  658  sudo docker run -p 3306:3306 --name uds-mysql-latest --network uds-network -e MYSQL_ROOT_PASSWORD=31y0_*PU3d0.31 -e MYSQL_DATABASE=uds_productos_db -e MYSQL_USER=uds_zipkin_user -e MYSQL_PASSWORD=34y0_*PU3d0.34 mysql:8 --character-set-server=utf8 --collation-server=utf8_general_ci
+  659  clear
+  660  sudo docker run -p 3306:3306 --name uds-mysql-latest --network uds-network -e MYSQL_ROOT_PASSWORD=31y0_*PU3d0.31 -e MYSQL_DATABASE=uds_productos_db mysql:8
+  661  sudo docker run -p 3306:3306 --name uds-mysql-latest --network uds-network -e MYSQL_ROOT_PASSWORD=31y0_*PU3d0.31 -e MYSQL_DATABASE=uds_productos_db -e MYSQL_USER=anaDMIN -e MYSQL_PASSWORD=34y0_*PU3d0.34 mysql:latest
+  662  sudo docker 1c9af26b695a exec -it uds-mysql-latest /bin/bash
+  663  sudo docker container exec -it uds-mysql-latest /bin/bash
+  664  clear
+  682  sudo docker run -p 9411:9411 --name uds-zipkin-server --network uds-network -e RABBIT_ADDRESSES=uds-rabbit-server:5672 -e STORAGE_TYPE=mysql -e MYSQL_DB=uds_zipkin_log_db -e MYSQL_USER=uds_zipkin_user -e MYSQL_PASS=34y0_*PU3d0.34 -e MYSQL_HOST=uds-mysql-latest -e MYSQL_TCP_PORT=3306 uds-zipkin-server:v1
+  714  sudo docker build -t uds-servicio-productos:v2 .
+  715  sudo docker run -P uds-servicio-productos --network uds-network uds-servicio-productos:v2  
+  716  sudo docker images
+  717  sudo docker run -P --name uds-servicio-productos --network uds-network uds-servicio-productos:v2 
+  718  sudo docker container exec -it uds-mysql-latest /bin/bash
+  719  sudo docker ps
+  747  sudo docker start ed85b56ce360 cfa22fbe74ba 3b977a0f6aa6
+  748  sudo docker stop ed85b56ce360 cfa22fbe74ba 3b977a0f6aa6
+  891  sudo docker build -t uds-zipkin-server:v2 .
+  892  sudo docker run -p 9411:9411 --name uds-zipkin-server --network uds-network -e RABBIT_ADDRESSES=uds-rabbit-server:5672 -e STORAGE_TYPE=mysql -e MYSQL_DB=uds_zipkin_log_db -e MYSQL_USER=zipkin -e MYSQL_PASS=zipkin -e MYSQL_HOST=uds-mysql-latest uds-zipkin-server:v2
+  893  sudo docker run -p 9411:9411 --name uds-zipkin-server --network uds-network -e RABBIT_ADDRESSES=uds-rabbit-server:5672 -e STORAGE_TYPE=mysql -e MYSQL_DB=uds_zipkin_log_db -e MYSQL_USER=root -e MYSQL_PASS=31y0_*PU3d0.31 -e MYSQL_HOST=uds-mysql-latest uds-zipkin-server:v2
+  894  sudo docker run -p 9411:9411 --name uds-zipkin-server --network uds-network -e RABBIT_ADDRESSES=uds-rabbit-server:5672 uds-zipkin-server:v2
+  906  sudo docker inspect 19061c52ff98
+  908  sudo docker stop 19061c52ff98;
+  909  sudo docker rm 19061c52ff98;
+  914  sudo docker restart 4b4bc1257641
+  918  sudo docker start cfa22fbe74ba
+  920  docker logs -f cfa22fbe74ba
+  921  sudo docker logs -f cfa22fbe74ba
+  922  sudo curl -L "https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+
+
+
+
+
+  406  head 4 employees.txt
+  407  head -4 employees.txt
+  408  head -3 employees.txt
+  409  vi -3 employees.txt
+  410  vi employees.txt
+  411  emacs employees.txt
+  412  CDPATH          Una lista de directorios separados por el signo ':' usada como                ruta de acceso por el comando cdHOME            El directorio principal de usuarioIFS             Una lista de caracteres para separar campos; usado cuando el                interprete de comandos separa palabras como parte de unaexpansion.MAIL            Si este parametro tiene un fichero definido y la variable                MAILPATH no esta definida, bash informa al usuario de la                llegada de correo al fichero especificado.MAILPATH        Una lista de ficheros separada por comas, en los cuales el                interprete de comandos comprueba periodicamente de la llegada                de correo.      OPTARG          El valor del ultimo argumento procesado por getopts.OPTIND          El indice del ultimo argumento procesado por getoptsPATH            Una lista de directorios, separados por comas, en los cuales                el interprete de comandos busca por comandosPS1             Prompt principal. El valor por defecto es “'\s-\v\$ 'PS2             El prompt secundario. El valor por defecto es '> '      auto_resume     Esta variable controla como el interprete de comandos                interaciona con el control de usuario y trabajos/procesos BASH            La ruta de acceso completa usada para ejecutar la instancia                actual de bashBASH_ENV        Si esta variable esta definida cuando bash es llamado para                ejecutar un script, su valor es expandido y usado como el                nombre del fichero leido antes de ejecutar el script.BASH_VERSION    El numero de version de bash usada BASH_VERSINFO   Una matriz de solo lectura con informacion sobre la version de                bash usada.COLUMNS         Usada por 'select' para determinar el ancho de la terminal                cuando imprime listas de menus.COMP_CWORD      Un indice en ${COMP_WORDS} de la palabra conteniendo la                posicion del puntero actualCOMP_LINE       La linea de comando actualCOMP_POINT      El indice de la posicion relativa del puntero actual con                respecto al comienzo del comando actual COMP_WORDS      Una matriz con las palabras individuales en la linea de                comando actualCOMPREPLY       Una matriz de donde bash lee las palabras posibles generadas                por una funcion del interprete de comandos usada por la                utilidad de generacion de terminos posibles. DIRSTACK        Una matriz que contiene los contenidos actuales del stack dedirectoriosEUID            El identificador numerico de usuario del usuario actual FCEDIT          El editor usado por defecto por la opcion -e del comando 'fc'FIGNORE         Una lista separada por comas de sufijos a ignorar cuando se                efectua la generacion de posibles nombres de ficheros. FUNCNAME        El nombre de la funcion que se esta ejecutando actual GLOBIGNORE      Una lista separada por comas de los patrones que definen el                conjunto de nombres de ficheros a ignorar cuando se efectua la                generacion de posibles nombresGROUPS          Una matriz que contiene la lista de los grupos a que pertenece                el usuario actualHISTCMD         El indice del comando actual en la historia de comandos HISTCONTROL     Define si un comando es ańadido a la historia de comandosHISTFILE        El nombre del fichero en el cual se graba la historia decomandos                de comandos. El valor por defecto es ~/.bash_historyHISTFILESIZE    El numero maximo de lineas contenidas en la historia de
+  413  comandos,                por defecto 500HISTIGNORE      Una lista separada por comas de los patrones usados para                definir que comandos deben de grabarse en la historia decomandosHISTSIZE        El maximo numero de comandos a recordar en la historia de                comandos, por defecto 500HOSTFILE        Contiene el nombre de un fichero en el mismo formato que                /etc/hosts que deberia de usarse cuando el interprete de                comandos necesita completar un nombre de maquina (hostname)HOSTNAME        El nombre de maquina actualHOSTTYPE        Cadena describiendo la maquina que esta ejecutando BashIGNOREEOF       Controla la accion a tomar cuando el interprete de comandos                recibe un caracter EOFINPUTRC         Nombre del fichero de inicializacion de 'Readline',                sobreescribiendo el valor por defecto  /etc/inputrc.LINES           Usada para determinar la anchura de la columna usada para                imprimir listas MACHTYPE        Cadena describiendo el tipo de sistema que esta ejecutando BashMAILCHECK       Frecuencia de comprobacion (en segundos) del correo                electronico en el fichero definido en las variables MAILPATH oMAILOLDPWD          Directorio previo definido por el comando 'cd'OSTYPE          Cadena describiendo el sistema operativo que esta ejecutandoBashPPID            El numero de proceso del proceso padre del interprete decomandosPS3             El valor de esta variable se usa como 'prompt'PWD             Directorio actual definido por el comando 'cd'RANDOM          Cuando se llama esta variable un numero entero entre 0  32767                es generadoSECONDS         Numero de segundos desde que Bash fue arrancadoSHELLOPTS       Lista con opciones de Bash activadasUID             El valor numerico real del usuario actual
+  414  env > /Desktop/variables.txt
+  415  touch /Desktop/env.txt
+  416  touch /home/an-b3z/Desktop/env.txt
+  417  env > /home/an-b3z/Desktop/env.txt
+  418  cat /home/an-b3z/Desktop/env.txt
+  419  cut -d "=" -f 1 /home/an-b3z/Desktop/env.txt > /home/an-b3z/Desktop/env2.txt
+  420  ls
+  421  cat env2.txt
+  422  gedit env2.txt
+  423  cut -d " " -f 3cut -d " " -f 3
+  424  cut -d " " -f 3 employees.txt
+  425  ls man
+  426  man ls
+  427  grep Nigar employees.txt | cur -d" " -f2,3,5 | sort | tr " " ", " | column 
+  428  grep Nigar employees.txt | cut -d" " -f2,3,5 | sort | tr " " ", " | column -t
+  429  xargs -d " " -I2,3,5 -n5 employees.txt echo "2 3 likes to 5"
+  430  xargs -t -d " " -I2,3,5 -n5  echo "2 3 likes to 5" employees.txt
+  431  xargs  -d " " -I 1  echo "2 3 likes to 5" employees.txt
+  432  xargs  -d " " -I 1  echo "2 3 likes to 5"| cat employees.txt
+  433  sudo fdisk -l
+  434  cd /etc/shadow
+  435  gedit /etc/shadow
+  436  sudo tail -1 /etc/shadow
+  437  sudo su
+  438  cd /etc/network
+  439  ls
+  440  ls .
+  441  cat networks
+  442  cd ..
+  443  ls
+  444  cat networks
+  445  ls ./networkd-dispatcher
+  446  cd network
+  447  ls
+  448  ls .
+  449  la -a
+  450  cd /
+  451  find interf*
+  452  find / -name interf* 
+  453  find /etc -name interf* 
+  454  sudo find /etc -name interf* 
+  455  cat /etc/cups/interfaces
+  456  cd /etc/cups/interfaces
+  457  ls
+  458  cd /etc
+  459  ls
+  460  cd inti
+  461  cd init
+  462  ls
+  463  cd NetworkManager
+  464  ls
+  465  cd ..
+  466  cd NetworkManager
+  467  ls
+  468  cat NetworkManager.conf
+  469  cd conf.d
+  470  ls
+  471  cd ..
+  472  ls syste-connections
+  473  ls system-connections
+  474  cat AnaTPL2.nmconnection
+  475  cd ..
+  476  ls
+  477  ls ./network
+  478  cat networks
+  479  cat nsswitch.conf
+  480  cd /user
+  481  cd ..
+  482  ls
+  483  cd usr
+  484  ls
+  485  cd local
+  486  ls
+  487  ls /etc/network
+  488  cd if-post-down.d
+  489  cd if-pre-up.d
+  490  cd /etc
+  491  cd network
+  492  cd if-post-down.d
+  493  ls
+  494  cd if-pre-up.d
+  495  cd ..
+  496  cd if-pre-up.d
+  497  ls
+  498  cat /etc/network/interfaces
+  499  man interfaces
+  500  map ip
+  501  man ip
+  502  man ip-addres
+  503  man ip -addres
+  504  env
+  505  var
+  506  declare
+  507  cd /home/an-b3z/
+  508  cd Desktop
+  509  ls
+  510  grep Nigar employees.txt | cut -d" " -f2,3,5 | sort | tr " " ", " | column -t
+  511  grep Nigar employees.txt | cut -d" " -f2,3,5 | echo "$0 $1 likes to $2"
+  512  echo "$0 $1 likes to $2"| cut -d" " -f2,3,5 |
+  513  echo "$0 $1 likes to $2"| cut -d" " -f2,3,5 employees.txt
+  514  echo "$0 $1 likes to $2"| cut -d" " -f2,3,5 employees.txt|echo "$0 $1 likes to $2"
+  515  echo "$0 $1 likes to $2"| cut -d" " -f2,3,5 employees.txt|echo "$2 $3 likes to $5"
+  516  cut -d" " -f2,3,5 employees.txt|echo "$2 $3 likes to $5"
+  517  jshell
+  518  grep Nigar employees.txt | cut -d" " -f2 | echo "$0 likes "
+  519  ls -l
+  520  /bin/python3 /home/an-b3z/workspace/python/vs/course.py
+  521  grep lori /etc/passwd
+  522  grepjshell
+  523  sudo su
+  524  py
+  525  f= "2"
+  526  f="2"
+  527  print f
+  528  echo f
+  529  /bin/python3 /home/an-b3z/workspace/python/vs/pythoncpurse.py
+  530  /bin/python3 /home/an-b3z/workspace/python/vs/pythoncpurse.py/bin/python3 /home/an-b3z/workspace/python/vs/pythoncpurse.py
+  531  /bin/python3 /home/an-b3z/workspace/python/vs/pythoncpurse.py
+  532  ls
+  533  cd worksáce
+  534  cd workspace
+  
+  567  ls
+  568  cd /Documentos
+  569  cd /workspace
+  570  cd .. cd workspace
+  571  cd ..
+  572  cd workspace
+  573  ls
+  574  cd workspaces
+  575  ls
+  576  cd ..
+  577  ls
+  578  cd python
+  579  ls
+  580  cd vs
+  581  ls
+  582  cat course.py
+  583  fdisk
+  584  lbdisk
+  585  fdisk
+  586  fisk --help
+  587  fdisk --help
+  588  df
+  589  fdisk -l
+  590  sudo fdisk -l
+  591  sudo mkdir /c
+  592  sudo mount /dev/sda /c
+  593  cd c
+  594  cd /c
+  595  ls
+  596  cd..
+  597  cd ..
+  598  ls 
+  599  sudo mount /dev/sda3 /c
+  600  ls /c
+  601  cd /home/an-b3z/workspaces
+  602  cd /home/an-b3z/workspace
+  603  cd ..
+  604  mv workspaces /c/Users
+  605  mv workspace /c/Users
+  606  ls
+  607  ls /c/Users
+  608  reboot -h
+  609  ls
+  610  cd snap
+  611  ls
+  612  mkdir /c
+  613  mount /dev/sda3 /c
+  614  sudo mount /dev/sda3 /c
+  615  ls
+  616  cd .. mv snap /c/Users
+  617  cd .. 
+  618  mv snap /c/Users
+  619  mv snap /c/Users
+  620  ls
+  621  ls /c/Users
+  622  ls -a /c/Users
+  623  ls Desktop
+  624  reboot -h
+  625  for i in range (0,-10,1):
+  626  for i in range(0,-10,1):
+  627  python3
+  628  /bin/python3 /media/an-b3z/Windows/files/files/linux/listasTuples.py
+  629  pets=('perro','gato','caballo')
+  630  /bin/python3 /media/an-b3z/Windows/files/files/linux/freq.py
+  631  hystory
+  632  history
+  633  cd /media/an-b3z/Windows/files/files/aws-shell
+  634  cd /media/an-b3z/Windows/files/files/
+  635  grep Jafar aws-shell
+  636  grep John aws-shell
+  637  awk -F '[ ]' '{print $2 $3 likes to $5}'
+  638  clear
+  639  cd /temp
+  640  cd /tmp
+  641  ls
+  642  cd mozilla_an-b3z0
+  643  ls
+  644  exit
+  645  python3
+  646  cd /
+  647  ls
+  648  cd dev
+  649  ls
+  650  ls /usr
+  651  cd /usr
+  652  ls share
+  653  chromium --version
+  654  cd /snap
+  655  ls
+  656  cd chromium
+  657  ls
+  658  cd 1229
+  659  ls
+  660  cd snapd
+  661  ls
+  662  cd..
+  663  cd ..
+  664  ls snapd
+  665  ls
+  666  ls snapd
+  667  cd ..
+  668  ls
+  669  cd snapd
+  670  ls
+  671  reboot -h
+  672  /bin/python3 /media/an-b3z/Windows/files/files/linux/dictionaries.py
+  673  keys=dict.fromkeys(nickname)
+  674  }nickname["Ana"]=5
+  675  nickname["Ana"]=5
+  676  keys=dict.fromkeys(nickname)
+  677  type(nickname)
+  678  python3
+  679  python 3
+  680  python3
+  681  ps
+  682  ps aux
+  683  ps aux | grep spring
+  684  kill 107032
+  685  ps aux | grep spring
+  686  ps aux | grep an-b3z
+  687  ps man
+  688  man ps
+  689  ps -U an-b3z
+  690  ps -U an-b3z | grep spring 
+  691  ps 
+  692  ps aux | grep an-b3z
+  693  ps -ax -U an-b3z | grep an-b3z
+  694  kill 107054
+  695  kill 107144
+  696  exit
+  697  python3
+  698  jshell
+  699  Gartner Top 10 Strategic Technology Trends for 2020exit
+  700  exit
+  701  jshell
+  702  python
+  703  python3
+  704  cd /
+  705  snapd
+  706  snap --version
+  707  exit
+  708  phyton3
+  709  cd /
+  710  python3
+  711  exit
+  712  pyton3
+  713  python3
+  714  cd /media
+  715  ls
+  716  chmod +x /media/an-b3z/Windows/files/files/linux/scripts/healthchecks.py
+  717  ./media/an-b3z/Windows/files/files/linux/scripts/healthchecks.py
+  718  cd /media/an-b3z/Windows/files/files/linux/scripts/
+  719  ls
+  720  ./healthcheacks.py
+  721  cd /home/an-b3z/Desktop/
+  722  ls
+  723  chmod +x healthchecks.py
+  724  ./healthchecks.py
+

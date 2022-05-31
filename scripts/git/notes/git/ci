@@ -1,0 +1,17 @@
+Execute the following steps:
+
+    Go back to the dev branch:
+
+    Erik@Server:~/myproject$ git checkout dev
+
+    Merge the branch to dev by creating a new commit object:
+
+    Erik@Server:~/myproject$ git merge --no-ff featureBranch
+
+    Delete the branch (the branch explains a feature that is now part of the dev branch, so there is no reason to keep it):
+
+    Erik@Server:~/myproject$ git branch -d featureBranch
+
+    Push your changes on the remote dev repository:
+
+    Erik@Server:~/myproject$ git push origin dev

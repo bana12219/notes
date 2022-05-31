@@ -1,0 +1,40 @@
+Patrones de diseño y lenguaje gof
+patroes de arquitectura
+
+tipos de sistema
+rrequerimientos no funcionales
+
+es interactivo?
+requiere cambios frecuentes?
+req no funcionales: fiabilidad, rendimiento.
+
+patrones de arquitectura(POSA)
+aruquitectura en capas
+	blackboard
+	pipes and filters
+
+sistemas distribuidos
+	cloente servidor
+	broker
+Sistemas interactivos
+	MVC
+	PResentacion-Abstraccion-control
+sistemas adaptables
+	Microkernel spring-node
+	Reflexion
+arquitectura gestionada por eventos
+
+modelos smanticos
+
+
+
+
+ JAVA 8 (Plus 9, 11),
+Patrones de Diseño,
+Spring Framework,
+Spring Boot,
+SOLID,
+Spring Cloud,
+Pruebas unitarias,
+Base de Datos (queries) SQL, MySQL, Postgress, DB2,
+Herramientas de automatización de builds (Maven, Gradle) 

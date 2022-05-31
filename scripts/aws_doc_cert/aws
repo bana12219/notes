@@ -1,0 +1,254 @@
+
+----EC2 definidas como el conjunto de 
+	 * Virtual computing environment
+	 * AMIS que son templates de AMIS, 
+	 * tipo de instancia.configuracion de memoria, storage, network capacity 
+	 * login info, mediante key-pairs
+	 * storage volumes temporales o instance volumes store
+	 * volumenes EBS o volumenes de almacenamiento persistente EBS
+	 * Availability zone, ubicación física de los recursos
+	 * Firewall para la especificación de puertos, protocolos y rangos de ip para alcanzar las intancias usando SG
+	 * Direcciones estáticas IPv4 para cómputo en la nube dinámico, o Elastic IP Address
+	 * Tags o metadatos
+	 * VPC lógicamnte aisladas del resto de la red AWS
+-------Clasificacion
+se clasifican deacuerdo a la combinación optimizada para propósitos específicos de las características de cómputo
+
+proposito general
+	A1
+	  cost savings para scale out y ARM based applications como servidores web, contenedores, caching fleets datastores
+	  del ecosistema ARM
+	  Model     vCPUs  Memory (GiB)Instance Storage   	Network Bandwidth (Gbps)  EBS Bandwidth (Mbps)
+	a1.medium 	1 	2 	EBS-Only 		Up to 10 			Up to 3,500
+	a1.large 	2 	4 	EBS-Only 		Up to 10 			Up to 3,500
+	a1.xlarge 	4 	8 	EBS-Only 		Up to 10 			Up to 3,500
+	a1.2xlarge 	8 	16 	EBS-Only 		Up to 10 			Up to 3,500
+	a1.4xlarge 	16 	32 	EBS-Only 		Up to 10 			3,500
+	a1.metal 	16* 	32 	EBS-Only 		Up to 10 			3,500
+	
+	T3
+	Instance 	vCPU* 	CPU Credits/hour 	Mem (GiB) 	Storage 	Network Performance (Gbps)
+	t3.nano 	2	6			0.5 	EBS-Only 	Up to 5
+	t3.micro 	2	12			1 	EBS-Only	Up to 5
+	t3.small 	2	24			2 	EBS-Only	Up to 5
+	t3.medium 	2 	24	4 	EBS-Only	Up to 5
+	t3.large 	2 	36	8 	EBS-Only 	Up to 5
+	t3.xlarge 	4 	96	16 	EBS-Only 	Up to 5
+	t3.2xlarge 	8 	192	32 	EBS-Only 	Up to 5
+	
+	T3a
+	T2
+	M6g
+	M5
+	M5a
+	M5n
+	M4
+	
+
+	Use Cases
+
+	Websites and web applications, development environments, build servers, code repositories, micro services, test and staging environments, and line of business applications.  
+
+
+optimizadas
+	computo
+	  C6g
+	  C5
+	  C5a
+	  C5n
+	  C4
+	  Use Cases
+
+High performance computing (HPC), batch processing, ad serving, video encoding, gaming, scientific modelling, distributed analytics, and CPU-based machine learning inference.
+	memoria
+	  R6g
+	  R5
+	  R5a
+	  R5n
+	  R4
+	  X1e
+	  X1
+	  High Memory
+	  Z1d
+	 Use Cases
+
+		Memory-intensive applications such as open-source databases, in-memory caches, and real time big data analytics
+	storage
+	  I3
+	  I3en
+	  D2
+	  H1
+	  Use Cases
+
+		NoSQL databases (e.g. Cassandra, MongoDB, Redis), in-memory databases (e.g. Aerospike), scale-out transactional databases, data warehousing, Elasticsearch, analytics workloads.
+	  
+computo avanzado
+	P3
+	P2
+	Inf1
+	G4
+	G3
+	F1
+	Use Cases
+
+Machine/Deep learning, high performance computing, computational fluid dynamics, computational finance, seismic analysis, speech recognition, autonomous vehicles, drug discovery.
+
+----Best Practices
+	seguridad
+	 * Gestión de Accesos mediante IAM users e IAM roles, policies y procedimientos para  creación, distribucion, rotación y revocación de credenciales.
+	 * Establecer los minimos privilegios para el grupo de seguridad.  
+	 * Patch, update y secure el sistema operativo y las aplicaicones de la instancia. 
+	storage
+	 * Entender las implicaciones de root device type para backup, persistencia y recovery
+	 * Usar Amazon EBS  para separar el so de los datos temporales. Asegurate de que el volumen con tus datos persiste despues de terminar la instancia 
+	 * Usa instance store para datos temporales pues recuerda que seran eliminados cuando termines la instancia  y en caso de usarlo para DB asegurate de tener un cluster de replicación para tolerancia a fallos.
+	 * Encripta EBS volumes y snapshot. 
+	Resource Management
+	 * Usa los tags y metadata para hacer track e identificar tus recursos AWS
+	Backup y recovery
+	 * uso de snapshots para backups regulares, creación de AMI para guardar la configuacion como template y lanzar futuras instancias
+	 * Despliegue de componenetes criticos de la app en multiples AZ y replicación de datos apropiada.
+	 * Diseña tus aplicaciones para manejar dinámicamente  IP addressing cuando tus instancias reinicien. 
+	 * Monitoreo y respuesta a eventos. 
+	 * Asegurate de estar listo para failover. Para solución básica puedes usar eni o elastic ip o bien la solucion autoscaling 
+	 * Test regular de procesos para recuperar tus instancias 
+----User Account
+	para AMI ec2-user
+	CentOS   centos
+	Debian   admin
+	Fedora   ec2-user o fedora
+	RHEL     ec2-user o root
+	SUSE     ec2-user o root
+	UBUNTU   ubuntu
+	
+	se recomienda más bien crear cuentas de usuario alternativas en vez de dar acceso a default user
+	1.crear llave
+	ssh-keygen -y -f /path_to_key_pair/key-pair-name.pem
+	2.agregar usuario /etc/password
+	sudo adduser newuser
+	sudo adduser newuser --disabled-password
+	3.cambiar al ambiente de dir actual
+	sudo su - newuser
+	
+	$ mkdir .ssh
+	$ chmod 700 .ssh
+	touch .ssh/authorized_keys
+	$ chmod 600 .ssh/authorized_keys
+	nano .ssh/authorized_keys
+	sudo userdel -r olduser
+-----Optimizacion de CPUS
+	Las instancias soportan multithreading por core, cada hilo se representa como un CPU virtual en la instancia. Cada hilo se representa como un CPU virtual. Cada hilo tiene un número de de CPU cores m5.xlarge tiene 2 CPU cores y 2 hilos por core por defecto
+	* Number of CPU cores Puedes ajustar el número de cores por instancia, probablemente para reducir los costos de licenciamiento de SW con una instancia que tenga suficiente RAM  para compenzar los cores
+	* Hilos por core puedes tener solo un hilo por core. Haciendolo para incremental el rendimiento del cómputo. 
+	
+----Burstable performance instance requirements
+	* disponibles par on-demand, Reserved, Dedicated, Spot pero no scheduled ni en host dedicados
+	* el tamaño de la instancia que escoges pasa el minimo para el sistema operativo y la app	
+   ----Best Practices
+        * Uso de AMI recomendada- usar la ami que provee los drivers que se requieren
+        * Turn on instance recovery- 
+   ----Ganar créditos
+        * Se adquieren por hora o milisegundo, se adquieren meintras 
+        Para T3 y T3a, el saldo de créditos de la CPU se retienen durante siete días después de detenerse una instancia, y luego se pierden. Si inicia la instancia en un plazo de siete días, no se pierde ningún crédito.
+
+Para T2, el saldo de créditos de CPU no persiste entre paradas e inicios de instancia. Si detiene una instancia T2, la instancia pierde todos sus créditos acumulados. 
+        (number of credits earned/number of vCPUs)/60 minutes = % baseline utilization
+        
+
+	(6 credits earned/2 vCPUs)/60 minutes = 5% baseline utilization
+	
+
+	 
+	 
+	 
+############	 ¿Qué significa que las instancias T2 compartan CPU?
+lo que conozco de las instancias es que son virtuales, entonces comparten recursos y en especial el numero de cores tiene la opcion a ser configurado para poder determinar también el número de hilos o CPU virtuales que va a ejecutar, excepto las instancias dedicadas.
+
+También que existen instancias de rendimiento ampliable, esto se da mediante creditos acumulables que son consumidos cuando se requiere de la instancia un rendimiento mayor, y las instancias T sirven a estos propósitos. Las instancias T están diseñadas para funcionar como si tuvieran núcleos intel de gran velocidad según lo indica la documentación oficial 
+	 
+	 
+-----Networking
+	Puedes crear una VPN con un a routable CIDR block que caiga fuera del rango de IPv4 privadas especificadas en RFC 1918	
+	Los host dentro de una empresa se pueden dividir en 3 categorias:
+	  * CAT 1:Host que no requieren acceso a hostsobre internet usan ips no ambiguas dentro de la empresa, pero si pueden serlo en otras
+	  * CAT 2:host con acceso limitado a recursos en fuera, como email y puede ser manejado con gateways, estos no requieren aceso ilimitado a internet por razones de privacidad o seguridad, al igual que la categoria anterior las ip son no ambiguas en enterprise pero si pueden serle entre enterprises
+	  * CAT 3:host con acceso a internet con ip global no ambigua 
+	 
+	 cat 1 y 2 se consideran privadas y cat 3 se considera pública
+	 
+	 espacio de IPS privadas
+	 10.0.0.0        -   10.255.255.255  (10/8 prefix)
+        172.16.0.0      -   172.31.255.255  (172.16/12 prefix)
+        192.168.0.0     -   192.168.255.255 (192.168/16 prefix)
+	
+	We will refer to the first block as "24-bit block", the second as"20-bit block", and to the third as "16-bit" block. Note that (in
+   pre-CIDR notation) the first block is nothing but a single class A network number, while the second block is a set of 16 contiguous
+   class B network numbers, and third block is a set of 256 contiguous class C network numbers.
+   
+   
+   
+------ALB 
+	*single point of contact para los clientes. Distribuye incoming application trafic entre targets como instancias, Az
+	*listener para request en el puerto y protocolo especificado. 
+	*Rules, especifican prioridad, acciones y condiciones 
+	*Target group pueden ser instancias EC2 usando puerto y protocolo
+	*Health checks 
+	*AZ
+	*SG
+-------------------------------------------------------------------------------------------
+Site to site
+The following are the key concepts for Site-to-Site VPN:
+
+    VPN connection: A secure connection between your on-premises equipment and your VPCs.
+
+    VPN tunnel: An encrypted link where data can pass from the customer network to or from AWS.
+
+    Each VPN connection includes two VPN tunnels which you can simultaneously use for high availability.
+
+    Customer gateway: An AWS resource which provides information to AWS about your customer gateway device.
+
+    Customer gateway device: A physical device or software application on your side of the Site-to-Site VPN connection.
+
+
+
+Describe los distintos tipos de almacenamiento de S3
+Storage Classes: S3 Standard, S3 Intelligent-Tiering, S3 Standard-Infrequent Access (S3 Standard-IA), S3 One Zone-Infrequent Access (S3 One Zone-IA), Amazon S3 Glacier (S3 Glacier), and Amazon S3 Glacier Deep Archive (S3 Glacier Deep Archive).
+estas son las de la demo de Bootcamp y de udemy
+
+¿Qué diferencia hay entre Fargate y Lambda?
+fargate es la opcion serverless de ECS, lambda es el "equivalente" de un microservicio en serverless
+plataforma-servicio
+** profundizar aquí
+Qué servicio sugerirías utilizar a un desarrollador que solo quiere desplegar su aplicación y no quiere saber de infraestructura
+beanstalk
+
+¿Para que sirven los private endpoints?
+estos son  para compartir recursos, están en la seción de udemy networking de S3, 
+
+
+
+   ----cloud formation
+	IaC 
+	yaml
+	 Reosurces 
+
+
+
+#AWS Disk formatting 
+ sudo file -s /dev/xvdb
+ #sid¿ de vuelve data es que hay que configurar, no hay file system
+ sudo mkfs -t ext4 device_name
+#mount point
+ sudo mkdir mount_poit
+#montar la unidad en el directorio
+ sudo mkdir mount device_name mount_point
+# editar para montado automático
+ sudo co /etc/fstab /etc/fstab.orig
+ #agregar linea con nano
+ device_name mount_point file_system_type fs_mntops
+ /dev/xdvb   /data        est4            defaults, nofail 0 2
+#desmontar la unidad
+ sudo umount data 
+
+#obtener la zona de disponibilidad de una instancia EC2 consultando los metadatos de la ip
+ EC2_AVAIL_ZONE=$(curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone)
