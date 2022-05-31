@@ -1,0 +1,113 @@
+
+
+
+
+sudo apt-get install git
+    7  git config --global user.name "anaB3z"
+    8  git config --global user.email "ing.annab3z@gmail.com"
+    9  git add .
+    git commit
+    git push -u origin master
+   89  git checkout master
+   90  git pull origin master
+   91  git pull
+   92  git clone https://github.com/anab3z/uds-servicio-items-config.git
+   93  git merge https://github.com/anab3z/uds-servicio-items-config.git
+
+
+
+
+
+
+
+  194  cat employees.txt
+  195  grep Jafar employees.txt
+  196  grep -Jafar- employees.txt
+  197  grep "Jafar" employees.txt
+  198  grep -n "Jafar" employees.txt
+  199  grep -no "Jafar" employees.txt
+  200  grep -no "Jafar" *
+  201  grep -l "Jafar" *
+  202  grep -h "Jafar" *
+  203  cut -d " " -f 3 employees.txt
+  204  cut -d " " -f 3,5,6 employees.txt
+  205  cut -d " " -f 3,4,5 employees.txt
+  206  cut -d " " -f 2,3,5 employees.txt
+  207  cut -d " " -f5 var employees.txt
+  208  man cut
+  209  awk -F '[ ]' '{print $2 $3 likes to $5}'
+  210  awk -F '[ ]' '{print $2 $3 likes to $5}' employees.txt 
+  211  awk -F '[ ]' '{print $2\t $3\t likes to $5}' employees.txt 
+  212  awk -F '[ ]' '{echo $2 $3 likes to $5}' employees.txt 
+  213  awk -F '[ ]' '{print $2 $3 likes to $5}' employees.txt 
+  214  awk -F '[ ]' '{echo $2 $3 likes to $5}' employees.txt 
+  215  awk -F '[ ]' '{print $2" " $3" likes to "$5}' employees.txt 
+  216  awk -F '[ ]' '{printf"$%.2f\n"$4 }' employees.txt 
+  217  awk -F '[ ]' '{printf"$%.2f\n" "${4}" }' employees.txt 
+  218  awk -F '[ ]' '{printf"$%.2f\n" "$4" }' employees.txt 
+  219  awk -F '[ ]' '{printf"%f\n" "$4" }' employees.txt 
+  220  awk -F '[ ]' '{print"%f\n" "$4" }' employees.txt 
+  221  awk -F '[ ]' '{print "$4" }' employees.txt 
+  222  awk -F '[ ]' '{print $4 }' employees.txt 
+  223  awk -F '[ ]' '{printf("%f" $4) }' employees.txt 
+  224  awk  '{printf("%f\n" $4) }' employees.txt 
+  225  > demo.txt
+  226  ls
+  227  vi demo.txt
+  228  gedit demo.txt
+  229  awk -F '[ ]' '{printf("%f" $4) }' employees.txt 
+  230  awk 'BEGIN
+  231  awk 'BEGIN {OFS="_"} {print $1,$2}' demo.txt
+  232  awk '{print NR, $0}' demo.txt
+  233  clear
+  234  tput cols
+  235  printf "${tput cols}"
+  236  printf "(${tput cols})"
+  237  var columnas = tput cols
+  238  columnas = tput cols
+  239  columnas=tput cols
+  240  columnas=$(tput cols)
+  241  echo columnas
+  242  echo $columnas
+  243  echo $(tput cols)
+  244  printf "$(tput cols)"
+  245  clear
+  246  printf "%$(tput cols)s" "-"
+  247  printf "%30s" "-"
+  248  printf "%$(tput cols)s" "-" | tr " " "-"
+  249  printf "%.2f" "3"
+  250  printf "%.2f" "3000000000"
+  251  var=4
+  252  printf "%.2f" "${var}"
+  253  var=45000000000000
+  254  printf "%.2f" "${var}"
+  255  printf "$%.2f" "${var}"
+  256  man awk
+  257  awk '{print $2" "$3" likes to "$5}' employees.txt
+  258  awk '{print "$2 $3 likes to $5"}' employees.txt
+  259  awk '{print $2" "$3" likes to "$5}' employees.txt
+  260  awk '{printf "%.2f" "3000000000"}' employees.txt
+  261  awk '{printf "%s" "$2"}' employees.txt
+  262  awk '{printf "%s" "${2}"}' employees.txt
+  263  awk '{printf "%s" "$(2)"}' employees.txt
+  264  awk '{printf "%s", "$(2)"}' employees.txt
+  265  awk '{printf "%s", "${2}"}' employees.txt
+  266  awk '{printf "%s", ${2}}' employees.txt
+  267  awk '{printf  ${2}}' employees.txt
+  268  awk '{printf  $2}' employees.txt
+  269  cat employees.txt
+  270  awk '{printf "%s\n"  $2}' employees.txt
+  271  awk '{printf "%s\n",  $2}' employees.txt
+  272  awk '{printf  ${2}"\n"}' employees.txt
+  273  awk '{printf  ${2}}' employees.txt
+  274  awk '{printf  $2}' employees.txt
+  275  awk '{printf  $2\n}' employees.txt
+  276  awk '{printf  $2"\n"}' employees.txt
+  277  awk '{print $2"\n"}' employees.txt
+  278  awk '{printf "%s .\n",  $2}' employees.txt
+  279  awk '{printf "$%s \n",  $4}' employees.txt
+  280  awk '{printf "$%f \n",  $4}' employees.txt
+  281  awk '{printf "$%.2f \n",  $4}' employees.txt
+  282  awk '{printf "%.2f" "3000000000"}' employees.txt
+  283  awk '{printf "%.2f", "3000000000"}' employees.txt
+  284  ls
